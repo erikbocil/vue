@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content{
+    flex: 0 0 33.3333%;
+  } 
+  #red{
+    background-color: red;
+  }
+  #green{
+    background-color: green;
+  }
+  #blue{
+    background-color: blue;
+  }
+  #yellow{
+    background-color: yellow;
+  }
+  #purple{
+    background-color: purple;
+  }
+  #grey{
+    background-color: grey;
+  }
+  @media only screen and (max-width: 599px){
+    .container{
+      flex-direction: column;
+    }
+  }
+  @media only screen and (min-width : 600px) and (max-width : 959px){
+    .container{
+      flex-direction: row;
+    }
+    .content{
+      flex: 0 0 50%;
+    }
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="content" id="red">&nbsp</div>
+    <div class="content" id="green">&nbsp</div>
+    <div class="content" id="blue">&nbsp</div>
+    <div class="content" id="yellow">&nbsp</div>
+    <div class="content" id="purple">&nbsp</div>
+    <div class="content" id="grey">&nbsp</div>
+  </div>
+</body>
+</html>
