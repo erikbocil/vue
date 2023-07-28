@@ -13,7 +13,7 @@
       <input type="text" v-model="todo" />
       <button @click="addTodo">Tambahkan</button>
       <br />
-      {{ todos.length > 3 ? 'Hebat!' : '' }}
+      {{ hebat }}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
@@ -28,6 +28,11 @@
           addTodo: function () {
             this.todos.push(this.todo);
             this.todo = '';
+          },
+        },
+        computed: {
+          hebat: function () {
+            return this.todos.length > 3 ? 'Hebat!' : '';
           },
         },
         // watch: {
